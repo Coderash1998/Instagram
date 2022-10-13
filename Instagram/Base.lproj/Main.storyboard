@@ -144,11 +144,87 @@
                         <viewLayoutGuide key="safeArea" id="q9q-oY-Dt1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5OE-eL-gK7"/>
+                    <navigationItem key="navigationItem" id="5OE-eL-gK7">
+                        <barButtonItem key="rightBarButtonItem" title="+" image="insta_camera_btn" id="VRj-ke-G12">
+                            <connections>
+                                <segue destination="5xX-WG-tbi" kind="presentation" id="K6I-1g-8Zz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oIl-m5-70H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1796.9230769230769" y="3.5545023696682461"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="XUa-wH-97d">
+            <objects>
+                <viewController id="5xX-WG-tbi" customClass="CameraViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o9G-X5-WnN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="SwC-Dd-Y84">
+                                <rect key="frame" x="16" y="72" width="358" height="308"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="308" id="Xqh-4s-xTp"/>
+                                    <constraint firstAttribute="width" constant="358" id="iTq-bh-snP"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dfX-EG-voi" appends="YES" id="KCW-19-Vfa"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3wj-Ja-lNp">
+                                <rect key="frame" x="16" y="405" width="358" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="6MF-ph-v5d"/>
+                                    <constraint firstAttribute="height" constant="34" id="xlg-eO-pbU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiT-0z-yke">
+                                <rect key="frame" x="16" y="459" width="358" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="cJb-UK-OMR"/>
+                                    <constraint firstAttribute="height" constant="35" id="gVT-oo-nd3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="5xX-WG-tbi" eventType="touchUpInside" id="ijv-EV-71w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="weM-8u-oHf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3wj-Ja-lNp" firstAttribute="leading" secondItem="weM-8u-oHf" secondAttribute="leading" constant="16" id="8WP-Se-Arr"/>
+                            <constraint firstItem="TiT-0z-yke" firstAttribute="leading" secondItem="weM-8u-oHf" secondAttribute="leading" constant="16" id="Cqo-d8-4ng"/>
+                            <constraint firstItem="weM-8u-oHf" firstAttribute="trailing" secondItem="TiT-0z-yke" secondAttribute="trailing" constant="16" id="DST-We-4Q1"/>
+                            <constraint firstItem="3wj-Ja-lNp" firstAttribute="top" secondItem="SwC-Dd-Y84" secondAttribute="bottom" constant="25" id="Egw-ft-W6D"/>
+                            <constraint firstItem="3wj-Ja-lNp" firstAttribute="top" secondItem="SwC-Dd-Y84" secondAttribute="bottom" constant="25" id="LQx-aW-BIT"/>
+                            <constraint firstItem="TiT-0z-yke" firstAttribute="top" secondItem="3wj-Ja-lNp" secondAttribute="bottom" constant="20" id="TsW-T2-a9v"/>
+                            <constraint firstItem="SwC-Dd-Y84" firstAttribute="top" secondItem="weM-8u-oHf" secondAttribute="top" constant="25" id="W6F-Rv-eMl"/>
+                            <constraint firstItem="SwC-Dd-Y84" firstAttribute="leading" secondItem="weM-8u-oHf" secondAttribute="leading" constant="16" id="Ym9-Dc-H4q"/>
+                            <constraint firstItem="weM-8u-oHf" firstAttribute="trailing" secondItem="3wj-Ja-lNp" secondAttribute="trailing" constant="16" id="gt7-Fc-bJE"/>
+                            <constraint firstItem="weM-8u-oHf" firstAttribute="trailing" secondItem="SwC-Dd-Y84" secondAttribute="trailing" constant="16" id="wao-2d-otg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentField" destination="3wj-Ja-lNp" id="qEp-jK-zUf"/>
+                        <outlet property="imageView" destination="SwC-Dd-Y84" id="YpQ-TO-aEv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ye-km-V71" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dfX-EG-voi">
+                    <connections>
+                        <action selector="onCameraButton:" destination="5xX-WG-tbi" id="1f5-4v-Z9Q"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2763.0769230769229" y="3.5545023696682461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="INn-Kq-e1Z">
@@ -170,6 +246,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="image_placeholder" width="375" height="375"/>
+        <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
