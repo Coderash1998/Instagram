@@ -229,6 +229,28 @@
                                             <outlet property="nameLabel" destination="RBL-jO-WdK" id="VOL-ph-cJg"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddCommentCell" id="BI9-EW-PHV">
+                                        <rect key="frame" x="0.0" y="487.66666793823242" width="390" height="37"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BI9-EW-PHV" id="i7Y-oP-n28">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="37"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a comment ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cs3-wF-wN3">
+                                                    <rect key="frame" x="16" y="8" width="366" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Cs3-wF-wN3" secondAttribute="trailing" constant="8" id="KPx-Vf-UcD"/>
+                                                <constraint firstItem="Cs3-wF-wN3" firstAttribute="top" secondItem="i7Y-oP-n28" secondAttribute="top" constant="8" id="bmD-t1-pH8"/>
+                                                <constraint firstAttribute="bottom" secondItem="Cs3-wF-wN3" secondAttribute="bottom" constant="8" id="k3L-Lg-zEi"/>
+                                                <constraint firstItem="Cs3-wF-wN3" firstAttribute="leading" secondItem="i7Y-oP-n28" secondAttribute="leading" constant="16" id="vGm-QP-x1x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
